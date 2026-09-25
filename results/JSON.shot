@@ -1,0 +1,72 @@
+{
+  "project": "ai-learn-18-rag-chunking-strategies",
+  "seed": 42,
+  "config": {
+    "max_words": 60,
+    "overlap_words": 20,
+    "semantic": {
+      "lsa_dim": 16,
+      "break_percentile": 30,
+      "min_words": 15
+    },
+    "retriever": "BM25 (k1=1.5, b=0.75) over chunks"
+  },
+  "dataset": {
+    "n_docs": 8,
+    "n_queries": 48,
+    "corpus_tokens": 3355,
+    "doc_tokens_mean": 419.375
+  },
+  "contain@3": {
+    "plain": {
+      "fixed": 0.5417,
+      "overlap": 0.4792,
+      "sentence": 0.3542,
+      "recursive": 0.375,
+      "semantic": 0.2708
+    },
+    "title_prefix": {
+      "fixed": 0.6667,
+      "overlap": 0.6042,
+      "sentence": 0.5625,
+      "recursive": 0.5833,
+      "semantic": 0.5833
+    }
+  },
+  "hit@3": {
+    "plain": {
+      "fixed": 0.6042,
+      "overlap": 0.625,
+      "sentence": 0.3542,
+      "recursive": 0.375,
+      "semantic": 0.2708
+    },
+    "title_prefix": {
+      "fixed": 0.7292,
+      "overlap": 0.6875,
+      "sentence": 0.5625,
+      "recursive": 0.5833,
+      "semantic": 0.5833
+    }
+  },
+  "n_chunks": {
+    "fixed": 59,
+    "overlap": 83,
+    "sentence": 65,
+    "recursive": 77,
+    "semantic": 89
+  },
+  "overhead_x": {
+    "fixed": 1.0,
+    "overlap": 1.4471,
+    "sentence": 1.0,
+    "recursive": 1.0,
+    "semantic": 1.0
+  },
+  "plots": [
+    "strategy_containment.svg",
+    "chunk_lengths.svg",
+    "size_sweep.svg"
+  ],
+  "runtime_s": 0.267
+}
